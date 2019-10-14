@@ -2,3 +2,5 @@
 OS (Open Source ISE)
 
 OSSP Example
+
+Key members. KimSeonHu-DGU / Minju-0901 / hyeonazzz
