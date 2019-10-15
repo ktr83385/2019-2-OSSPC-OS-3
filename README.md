@@ -4,3 +4,5 @@ OS (Open Source ISE)
 Open Source Software Project
 
 Key members - KimSeonHu-DGU / Minji-0901 / hyeonazzz
+
+push test -minji
