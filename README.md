@@ -5,4 +5,4 @@ Open Source Software Project
 
 Key members - KimSeonHu-DGU / Minji-0901 / hyeonazzz
 
-push test -minji
+push test -minji, Kyounghyeon
