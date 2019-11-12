@@ -26,54 +26,54 @@ public class TMain extends JFrame {
 	private TetrisRenderer ai;
 
 	
-	// ´õºí ¹öÆÛ¸µÀ» À§ÇØ È­¸é¿¡ ÀÌ¹ÌÁö¸¦ ´ã±â À§ÇÑ InstanceµéÀÌ´Ù.
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Û¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Instanceï¿½ï¿½ï¿½Ì´ï¿½.
 	private Image screenImage;
 	private Graphics screenGraphic;
 
-	// ¹é±×¶ó¿îµå ÀÌ¹ÌÁö °´Ã¼ »ý¼º
+	// ï¿½ï¿½×¶ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 	private Image background = new ImageIcon(Main.class.getResource("../images/IntroBackground.png")).getImage();
 
-	// ¸Þ´º¹Ù °´Ã¼ »ý¼º
+	// ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 	private JLabel menuBar = new JLabel(new ImageIcon(Main.class.getResource("../images/menuBar.png")));
 
-	// ¸Þ´º ¹Ù À§ÀÇ exit button °ü·Ã °´Ã¼ »ý¼º
+	// ï¿½Þ´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ exit button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 	private ImageIcon exitButtonBasicImage = new ImageIcon(Main.class.getResource("../images/exitButtonBasic.png"));
 	private ImageIcon exitButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/exitButtonEntered.png"));
 	private JButton exitButton = new JButton(exitButtonBasicImage);
 
-	// SINGLE button °ü·Ã °´Ã¼ »ý¼º
-	private Image singleImage = new ImageIcon(Main.class.getResource("../images/SingleBasic.png")).getImage();
-	private ImageIcon singleBasicImage = new ImageIcon(Main.class.getResource("../images/SingleBasic.png"));
-	private ImageIcon singleEnteredImage = new ImageIcon(Main.class.getResource("../images/SingleEntered.png"));
+	// SINGLE button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+	private Image singleImage = new ImageIcon(Main.class.getResource("../images/Start.png")).getImage();
+	private ImageIcon singleBasicImage = new ImageIcon(Main.class.getResource("../images/Start.png"));
+	private ImageIcon singleEnteredImage = new ImageIcon(Main.class.getResource("../images/StartRed.png"));
 	private JButton singleBtn = new JButton(singleBasicImage);
 
-	// Normal button °ü·Ã °´Ã¼ »ý¼º
+	// Normal button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 	private Image normalImage = new ImageIcon(Main.class.getResource("../images/NormalBasic.png")).getImage();
 	private ImageIcon normalBasicImage = new ImageIcon(Main.class.getResource("../images/NormalBasic.png"));
 	private ImageIcon normalEnteredImage = new ImageIcon(Main.class.getResource("../images/NormalEntered.png"));
 	private JButton normalBtn = new JButton(normalBasicImage);
 
-	// Hard button °ü·Ã °´Ã¼ »ý¼º
+	// Hard button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 	private Image hardImage = new ImageIcon(Main.class.getResource("../images/HardBasic.png")).getImage();
 	private ImageIcon hardBasicImage = new ImageIcon(Main.class.getResource("../images/HardBasic.png"));
 	private ImageIcon hardEnteredImage = new ImageIcon(Main.class.getResource("../images/HardEntered.png"));
 	private JButton hardBtn = new JButton(hardBasicImage);
 
-	// Back button °ü·Ã °´Ã¼ »ý¼º
+	// Back button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 	private Image backImage = new ImageIcon(Main.class.getResource("../images/BackBasic.png")).getImage();
 	private ImageIcon backBasicImage = new ImageIcon(Main.class.getResource("../images/BackBasic.png"));
 	private ImageIcon backEnteredImage = new ImageIcon(Main.class.getResource("../images/BackEntered.png"));
 	private JButton backBtn = new JButton(backBasicImage);
 
-	// Setting button °ü·Ã °´Ã¼ »ý¼º
-	private Image settingImage = new ImageIcon(Main.class.getResource("../images/SettingBasic.png")).getImage();
-	private ImageIcon settingBasicImage = new ImageIcon(Main.class.getResource("../images/SettingBasic.png"));
-	private ImageIcon settingEnteredImage = new ImageIcon(Main.class.getResource("../images/SettingEntered.png"));
+	// Setting button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+	private Image settingImage = new ImageIcon(Main.class.getResource("../images/Setting.png")).getImage();
+	private ImageIcon settingBasicImage = new ImageIcon(Main.class.getResource("../images/Setting.png"));
+	private ImageIcon settingEnteredImage = new ImageIcon(Main.class.getResource("../images/SettingRed.png"));
 	private JButton settingBtn = new JButton(settingBasicImage);
 
-	// Exit button °ü·Ã °´Ã¼ »ý¼º
-	private ImageIcon exitBasicImage = new ImageIcon(Main.class.getResource("../images/ExitBasic.png"));
-	private ImageIcon exitEnteredImage = new ImageIcon(Main.class.getResource("../images/ExitEntered.png"));
+	// Exit button ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+	private ImageIcon exitBasicImage = new ImageIcon(Main.class.getResource("../images/Exit.png"));
+	private ImageIcon exitEnteredImage = new ImageIcon(Main.class.getResource("../images/ExitRed.png"));
 	private JButton exitBtn = new JButton(exitBasicImage);
 
 	private boolean isStartScreen = true;
@@ -85,7 +85,7 @@ public class TMain extends JFrame {
 	
 	public int[] key_setting = new int[11];
 	
-	// ¸¶¿ì½º ÀÌº¥Æ®¿¡ È°¿ëÇÏ±â À§ÇÑ ¸¶¿ì½º x, y ÁÂÇ¥
+	// ï¿½ï¿½ï¿½ì½º ï¿½Ìºï¿½Æ®ï¿½ï¿½ È°ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ì½º x, y ï¿½ï¿½Ç¥
 	private int mouseX, mouseY;
 
 	public TMain(int[] key)
@@ -95,32 +95,33 @@ public class TMain extends JFrame {
 	}
 	
 	public TMain() {
-		setUndecorated(true); // ±âº» ¸Þ´º¹Ù°¡ º¸ÀÌÁö ¾ÊÀ½. -> »õ·Î¿î menuBar¸¦ ³Ö±â À§ÇÑ ÀÛ¾÷
+		setUndecorated(true); // ï¿½âº» ï¿½Þ´ï¿½ï¿½Ù°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. -> ï¿½ï¿½ï¿½Î¿ï¿½ menuBarï¿½ï¿½ ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½
 		setSize(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
-		setResizable(false); // È­¸é Å©±â ¼öÁ¤ ºÒ°¡´É
-		setLocationRelativeTo(null); // È­¸é Á¤Áß¾Ó¿¡ ¶ß°Ô ÇÔ.
+		setResizable(false); // È­ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½
+		setLocationRelativeTo(null); // È­ï¿½ï¿½ ï¿½ï¿½ï¿½ß¾Ó¿ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½.
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
-		setBackground(new Color(0, 0, 0, 0));
-		setLayout(null); // È­¸é¿¡ ¹èÄ¡µÇ´Â ¹öÆ°ÀÌ³ª labelÀ» ±× ÀÚ¸® ±×´ë·Î µé¾î°¡°Ô ÇÔ.
+		setBackground(new Color(0, 0, 0, 255));
+	
+		setLayout(null); // È­ï¿½é¿¡ ï¿½ï¿½Ä¡ï¿½Ç´ï¿½ ï¿½ï¿½Æ°ï¿½Ì³ï¿½ labelï¿½ï¿½ ï¿½ï¿½ ï¿½Ú¸ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½ï¿½.
 
-		// Menu bar exit ¹öÆ° °ü·Ã Ã³¸®
+		// Menu bar exit ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		exitButton.setBounds(1245, 0, 30, 30);
 		exitButton.setBorderPainted(false);
 		exitButton.setContentAreaFilled(false);
 		exitButton.setFocusPainted(false);
-		// exit Button ÀÌº¥Æ® Ã³¸®
+		// exit Button ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
 		exitButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				exitButton.setIcon(exitButtonEnteredImage); // ¸¶¿ì½º°¡ exit ¹öÆ°¿¡ ¿Ã¶ó°¡¸é ÀÌ¹ÌÁö¸¦ ¹Ù²ãÁÜ.
-				exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ¸¶¿ì½º°¡ ¿Ã¶ó°¡¸é ¼Õ°¡¶ô ¸ð¾çÀ¸·Î¹Ù²Þ
+				exitButton.setIcon(exitButtonEnteredImage); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ exit ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½.
+				exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹Ù²ï¿½
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
 				exitButton.setIcon(exitButtonBasicImage);
-				exitButton.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ¸¶¿ì½º¸¦ ¶¼¸é ´Ù½Ã µðÆúÆ® ¸ð¾çÀ¸·Î ¹Ù²Þ
+				exitButton.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 			}
 
 			@Override
@@ -130,149 +131,149 @@ public class TMain extends JFrame {
 		});
 		add(exitButton);
 
-		// ¸Þ´º¹Ù ÀÌº¥Æ®
+		// ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ®
 		menuBar.setBounds(0, 0, 1280, 30);
 		menuBar.addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) { // ¸¶¿ì½º Å¬¸¯ ½Ã x,y ÁÂÇ¥¸¦ ¾ò¾î¿È.
+			public void mousePressed(MouseEvent e) { // ï¿½ï¿½ï¿½ì½º Å¬ï¿½ï¿½ ï¿½ï¿½ x,y ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 				mouseX = e.getX();
 				mouseY = e.getY();
 			}
 		});
-		menuBar.addMouseMotionListener(new MouseMotionAdapter() { // ¸Þ´º¹Ù¸¦ µå·¡±× ÇÒ¶§ È­¸éÀÌ µû¶ó¿À°Ô ÇÏ´Â ÀÌº¥Æ®
+		menuBar.addMouseMotionListener(new MouseMotionAdapter() { // ï¿½Þ´ï¿½ï¿½Ù¸ï¿½ ï¿½å·¡ï¿½ï¿½ ï¿½Ò¶ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ìºï¿½Æ®
 			public void mouseDragged(MouseEvent e) {
 				int x = e.getXOnScreen();
 				int y = e.getYOnScreen();
-				setLocation(x - mouseX, y - mouseY); // JFrameÀÇ À§Ä¡¸¦ ¹Ù²ãÁÜ
+				setLocation(x - mouseX, y - mouseY); // JFrameï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½
 			}
 		});
 		add(menuBar);
 
-		// Single ¹öÆ° °ü·Ã Ã³¸®
+		// Single ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		singleBtn.setBounds(440, 200, 400, 100);
 		singleBtn.setBorderPainted(false);
 		singleBtn.setContentAreaFilled(false);
 		singleBtn.setFocusPainted(false);
-		// exit Button ÀÌº¥Æ® Ã³¸®
+		// exit Button ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
 		singleBtn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				singleBtn.setIcon(singleEnteredImage); // ¸¶¿ì½º°¡ exit ¹öÆ°¿¡ ¿Ã¶ó°¡¸é ÀÌ¹ÌÁö¸¦ ¹Ù²ãÁÜ.
-				singleBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ¸¶¿ì½º°¡ ¿Ã¶ó°¡¸é ¼Õ°¡¶ô ¸ð¾çÀ¸·Î¹Ù²Þ
+				singleBtn.setIcon(singleEnteredImage); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ exit ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½.
+				singleBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹Ù²ï¿½
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
 				singleBtn.setIcon(singleBasicImage);
-				singleBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ¸¶¿ì½º¸¦ ¶¼¸é ´Ù½Ã µðÆúÆ® ¸ð¾çÀ¸·Î ¹Ù²Þ
+				singleBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 			}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				// ½Ì±Û ¸ðµå ½ÃÀÛ ÀÌº¥Æ®Ã³¸® ºÎºÐ
+				// ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ®Ã³ï¿½ï¿½ ï¿½Îºï¿½
 				normalModeScreen();
 			}
 		});
 		add(singleBtn);
 
-		// Hard ¹öÆ° °ü·Ã Ã³¸®
+		// Hard ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		hardBtn.setBounds(130, 340, 400, 100);
 		hardBtn.setBorderPainted(false);
 		hardBtn.setContentAreaFilled(false);
 		hardBtn.setFocusPainted(false);
 		hardBtn.setVisible(false);
-		// hard Button ÀÌº¥Æ® Ã³¸®
+		// hard Button ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
 		hardBtn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				hardBtn.setIcon(hardEnteredImage); // ¸¶¿ì½º°¡ exit ¹öÆ°¿¡ ¿Ã¶ó°¡¸é ÀÌ¹ÌÁö¸¦ ¹Ù²ãÁÜ.
-				hardBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ¸¶¿ì½º°¡ ¿Ã¶ó°¡¸é ¼Õ°¡¶ô ¸ð¾çÀ¸·Î¹Ù²Þ
+				hardBtn.setIcon(hardEnteredImage); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ exit ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½.
+				hardBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹Ù²ï¿½
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
 				hardBtn.setIcon(hardBasicImage);
-				hardBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ¸¶¿ì½º¸¦ ¶¼¸é ´Ù½Ã µðÆúÆ® ¸ð¾çÀ¸·Î ¹Ù²Þ
+				hardBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 			}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				// ÇÏµå ¸ðµå ½ÃÀÛ ÀÌº¥Æ®Ã³¸® ºÎºÐ
+				// ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ®Ã³ï¿½ï¿½ ï¿½Îºï¿½
 			}
 		});
 		add(hardBtn);
 
-		// Back ¹öÆ° °ü·Ã Ã³¸®
+		// Back ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		backBtn.setBounds(130, 470, 400, 100);
 		backBtn.setBorderPainted(false);
 		backBtn.setContentAreaFilled(false);
 		backBtn.setFocusPainted(false);
 		backBtn.setVisible(false);
-		// exit Button ÀÌº¥Æ® Ã³¸®
+		// exit Button ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
 		backBtn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				backBtn.setIcon(backEnteredImage); // ¸¶¿ì½º°¡ exit ¹öÆ°¿¡ ¿Ã¶ó°¡¸é ÀÌ¹ÌÁö¸¦ ¹Ù²ãÁÜ.
-				backBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ¸¶¿ì½º°¡ ¿Ã¶ó°¡¸é ¼Õ°¡¶ô ¸ð¾çÀ¸·Î¹Ù²Þ
+				backBtn.setIcon(backEnteredImage); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ exit ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½.
+				backBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹Ù²ï¿½
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
 				backBtn.setIcon(backBasicImage);
-				backBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ¸¶¿ì½º¸¦ ¶¼¸é ´Ù½Ã µðÆúÆ® ¸ð¾çÀ¸·Î ¹Ù²Þ
+				backBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 			}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				// µÚ·Î °¡±â ÀÌº¥Æ® Ã³¸®ºÎºÐ
+				// ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½ï¿½Îºï¿½
 			}
 		});
 		add(backBtn);
 
-		// Setting ¹öÆ° °ü·Ã Ã³¸®
+		// Setting ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		settingBtn.setBounds(440, 320, 400, 100);
 		settingBtn.setBorderPainted(false);
 		settingBtn.setContentAreaFilled(false);
 		settingBtn.setFocusPainted(false);
-		// Setting Button ÀÌº¥Æ® Ã³¸®
+		// Setting Button ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
 		settingBtn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				settingBtn.setIcon(settingEnteredImage); // ¸¶¿ì½º°¡ Setting ¹öÆ°¿¡ ¿Ã¶ó°¡¸é ÀÌ¹ÌÁö¸¦ ¹Ù²ãÁÜ.
-				settingBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ¸¶¿ì½º°¡ ¿Ã¶ó°¡¸é ¼Õ°¡¶ô ¸ð¾çÀ¸·Î¹Ù²Þ
+				settingBtn.setIcon(settingEnteredImage); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ Setting ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½.
+				settingBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹Ù²ï¿½
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
 				settingBtn.setIcon(settingBasicImage);
-				settingBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ¸¶¿ì½º¸¦ ¶¼¸é ´Ù½Ã µðÆúÆ® ¸ð¾çÀ¸·Î ¹Ù²Þ
+				settingBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 			}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				// SettingÃ¢ È­¸éÀ¸·Î ³Ñ¾î°¡±â
+				// SettingÃ¢ È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½
 				SettingsDialog.showDialog(TMain.this, key_setting);
 				//setkey = new TSetting(TMain.this);
 			}
 		});
 		add(settingBtn);
 
-		// exit ¹öÆ° °ü·Ã Ã³¸®
+		// exit ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		exitBtn.setBounds(440, 440, 400, 100);
 		exitBtn.setBorderPainted(false);
 		exitBtn.setContentAreaFilled(false);
 		exitBtn.setFocusPainted(false);
-		// exit Button ÀÌº¥Æ® Ã³¸®
+		// exit Button ï¿½Ìºï¿½Æ® Ã³ï¿½ï¿½
 		exitBtn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				exitBtn.setIcon(exitEnteredImage); // ¸¶¿ì½º°¡ exit ¹öÆ°¿¡ ¿Ã¶ó°¡¸é ÀÌ¹ÌÁö¸¦ ¹Ù²ãÁÜ.
-				exitBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ¸¶¿ì½º°¡ ¿Ã¶ó°¡¸é ¼Õ°¡¶ô ¸ð¾çÀ¸·Î¹Ù²Þ
+				exitBtn.setIcon(exitEnteredImage); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ exit ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½.
+				exitBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½Ã¶ó°¡¸ï¿½ ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹Ù²ï¿½
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
 				exitBtn.setIcon(exitBasicImage);
-				exitBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ¸¶¿ì½º¸¦ ¶¼¸é ´Ù½Ã µðÆúÆ® ¸ð¾çÀ¸·Î ¹Ù²Þ
+				exitBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ï¿½ï¿½ï¿½ì½ºï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 			}
 
 			@Override
@@ -287,23 +288,28 @@ public class TMain extends JFrame {
 
 	public void paint(Graphics g) {
 
-		// 1280X720¸¸Å­ÀÇ ÀÌ¹ÌÁö¸¦ ¸¸µç´ÙÀ½¿¡ screenImage¿¡ ³Ö¾îÁÜ.
+		// 1280X720ï¿½ï¿½Å­ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ screenImageï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½.
 		screenImage = createImage(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
-		screenGraphic = screenImage.getGraphics(); // screenImage¸¦ ÀÌ¿ëÇØ ±×·¡ÇÈÀ» ¾ò¾î¿È.
-		screenDraw(screenGraphic); // ½ºÅ©¸°¿¡ ±×·¡ÇÈÀ» ±×·ÁÁÜ.
+		screenGraphic = screenImage.getGraphics(); // screenImageï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+		//screenDraw(screenGraphic); // ï¿½ï¿½Å©ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½.
+		//screenGraphic.drawImage(background, 0, 0, null);
+		g.drawImage(background, 0, 0, null);
+		paintComponents(g);
+		this.revalidate();
+		this.repaint();
 		g.drawImage(screenImage, 0, 0, null);
 	}
 
-	// ¹é±×¶ó¿îµå ÀÌ¹ÌÁö¸¦ ±×·ÁÁØ´Ù.
+	// ï¿½ï¿½×¶ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½Ø´ï¿½.
 	public void screenDraw(Graphics g) {
-		g.drawImage(background, 0, 0, null); // drawImage´Â Ãß°¡µÈ °ÍÀÌ ¾Æ´Ï¶ó ´Ü¼øÈ÷ È­¸é¿¡ ÀÌ¹ÌÁö¸¦ Ãâ·ÂÇÒ ¶§ ¾²´Â ÇÔ¼öÀÌ´Ù.
+		g.drawImage(background, 0, 0, null); // drawImageï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ ï¿½Ü¼ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½Ì´ï¿½.
 		if(isNormalModeScrren == true)
 		{
 			g.clearRect(0, 0, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
 		}
-		paintComponents(g); // JLabel, ¹öÆ° °°ÀÌ Main Frame¿¡ Ãß°¡µÈ °ÍµéÀ» ±×·Á ÁÖ´Â ¿ªÇÒÀ» ÇÔ.
+		paintComponents(g); // JLabel, ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½ Main Frameï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Íµï¿½ï¿½ï¿½ ï¿½×·ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½.
 		this.revalidate();
-		this.repaint(); // paint ÇÔ¼ö¸¦ ´Ù½Ã ºÒ·¯¿À´Â ÇÔ¼ö. Áï ¸Å ¼ø°£¼ø°£¸¶´Ù »õ·Î ±×·ÁÁÖ´Â ¿ªÇÒÀ» ÇÔ.
+		this.repaint(); // paint ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½. ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½.
 	}
 	
 	public void normalModeScreen() {
