@@ -113,7 +113,7 @@ public class TMain extends JFrame {
 		setLayout(null); // ȭ�鿡 ��ġ�Ǵ� ��ư�̳� label�� �� �ڸ� �״�� ���� ��.
 
 		// Menu bar exit ��ư ���� ó��
-		exitButton.setBounds(1245, 0, 30, 30);
+		exitButton.setBounds(1820, 0, 30, 30);
 		exitButton.setBorderPainted(false);
 		exitButton.setContentAreaFilled(false);
 		exitButton.setFocusPainted(false);
@@ -139,7 +139,7 @@ public class TMain extends JFrame {
 		add(exitButton);
 
 		// �޴��� �̺�Ʈ
-		menuBar.setBounds(0, 0, 1280, 30);
+		menuBar.setBounds(0, 0, 1920, 30);
 		menuBar.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) { // ���콺 Ŭ�� �� x,y ��ǥ�� ����.
 				mouseX = e.getX();
@@ -156,7 +156,7 @@ public class TMain extends JFrame {
 		add(menuBar);
 
 		// Single ��ư ���� ó��
-		singleBtn.setBounds(440, 200, 400, 100);
+		singleBtn.setBounds(755, 350, 410, 110);
 		singleBtn.setBorderPainted(false);
 		singleBtn.setContentAreaFilled(false);
 		singleBtn.setFocusPainted(false);
@@ -237,7 +237,7 @@ public class TMain extends JFrame {
 		add(backBtn);
 
 		// Setting ��ư ���� ó��
-		settingBtn.setBounds(440, 320, 400, 100);
+		settingBtn.setBounds(755, 500, 410, 110);
 		settingBtn.setBorderPainted(false);
 		settingBtn.setContentAreaFilled(false);
 		settingBtn.setFocusPainted(false);
@@ -265,7 +265,7 @@ public class TMain extends JFrame {
 		add(settingBtn);
 
 		// exit ��ư ���� ó��
-		exitBtn.setBounds(440, 440, 400, 100);
+		exitBtn.setBounds(750, 650, 410, 110);
 		exitBtn.setBorderPainted(false);
 		exitBtn.setContentAreaFilled(false);
 		exitBtn.setFocusPainted(false);
