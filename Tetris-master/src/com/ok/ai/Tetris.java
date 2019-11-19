@@ -815,7 +815,7 @@ public class Tetris
 	}
 
 	//°ÔÀÓÆÇ »ö
-	protected static final Color C_BACKGROUND = Color.BLACK;
+	protected static final Color C_BACKGROUND = Color.BLACK; //게임창 배경색 설정
 	protected static final Color C_BORDER = new Color(63, 63, 63);
 	protected static final Color C_SHADOW = new Color(0, 0, 0, 63);
 	protected static final Color C_GHOST = new Color(180, 180, 180);
@@ -836,9 +836,9 @@ public class Tetris
 		g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
 		y += 60;
 
-		g.setColor(C_BACKGROUND);
+		g.setColor(C_BACKGROUND); //배경색 대입
 		//g.fillRoundRect(x, y, FIELD_W, FIELD_H, 20, 20);
-		g.fillRect(x, y, FIELD_W, FIELD_H);
+		g.fillRect(x, y, FIELD_W, FIELD_H); //게임 창 구성
 
 		if (!dead)
 		{
