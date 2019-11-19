@@ -3,8 +3,10 @@ package com.ok.main;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -20,6 +22,9 @@ import com.ok.ai.TetrisRenderer;
 import com.ok.window.Tetris;
 
 public class TMain extends JFrame {
+	
+	public static int SCREEN_WIDTH = 0;
+	public static int SCREEN_HEIGHT = 0;
 
 	private Tetris uc;
 	private TSetting setkey;
@@ -95,6 +100,8 @@ public class TMain extends JFrame {
 	}
 	
 	public TMain() {
+		
+		
 		setUndecorated(true); // �⺻ �޴��ٰ� ������ ����. -> ���ο� menuBar�� �ֱ� ���� �۾�
 		setSize(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
 		setResizable(false); // ȭ�� ũ�� ���� �Ұ���
