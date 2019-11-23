@@ -1,4 +1,5 @@
 package com.ok.ai;
+
 /*
 
 This program was written by Jacob Jackson. You may modify,
@@ -19,6 +20,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import javax.imageio.ImageIO;
+
+import com.ok.main.EffectSound;
 
 
 public class Tetris
@@ -504,8 +507,19 @@ public class Tetris
 	{
 		paused = val;
 	}
+	public void eff_game_die() {
+		EffectSound game_die = new EffectSound();
+		while(true) {
+			try {
+				game_die.eff_game_die();
+			} catch(Exception e) {
+			}break;
+		}
+	}
+
 	protected void die()
 	{
+		eff_game_die();
 		dead = true;
 		paused = false;
 	}
