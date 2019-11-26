@@ -8,8 +8,8 @@ Open Source ISE - KimSeonHu-DGU / Minji-0901 / hyeonazzz
 Development and modification through original source
 and experience collaborative process through GitHUb
 
-* **PSNB92** - *original author* - [PurpleBooth](https://github.com/PSNB92/Tetris)
-* **PAIS Team** - *Secondary author* - [PurpleBooth](https://github.com/CSID-DGU/2019-1-OSSPC-PAIS-1)
+* **PSNB92** - *original author* - [github LINK](https://github.com/PSNB92/Tetris)
+* **PAIS Team** - *Secondary author* - [github LINK](https://github.com/CSID-DGU/2019-1-OSSPC-PAIS-1)
 
 
 ## Environment
@@ -20,6 +20,6 @@ and experience collaborative process through GitHUb
 
 ## License
 
-This project is licensed under the MIT License [LICENSE.md]
-(LICENSE.md) file for details.
+This project is licensed under the MIT License
+[LICENSE.md] file for details.
 
