@@ -36,8 +36,10 @@ public class TMain extends JFrame {
 	private Graphics screenGraphic;
 
 	// ��׶��� �̹��� ��ü ����
-	private Image background = new ImageIcon(Main.class.getResource("../images/IntroBackground.png")).getImage();
-
+	//private Image background = new ImageIcon(Main.class.getResource("../images/IntroBackground.png")).getImage();
+	private JLabel MainScreen = new JLabel(new ImageIcon(Main.class.getResource("../images/IntroBackground.png")));
+	
+	
 	// �޴��� ��ü ����
 	private JLabel menuBar = new JLabel(new ImageIcon(Main.class.getResource("../images/menuBar.png")));
 
@@ -112,6 +114,7 @@ public class TMain extends JFrame {
 	
 		setLayout(null); // ȭ�鿡 ��ġ�Ǵ� ��ư�̳� label�� �� �ڸ� �״�� ���� ��.
 
+		
 		// Menu bar exit ��ư ���� ó��
 		exitButton.setBounds(1820, 0, 30, 30);
 		exitButton.setBorderPainted(false);
@@ -290,29 +293,39 @@ public class TMain extends JFrame {
 		});
 		add(exitBtn);
 		
+		MainScreen.setBounds(0,0, 1920, 1080);
+		//backBtn.setBorderPainted(false);
+		//backBtn.setContentAreaFilled(false);
+		//backBtn.setFocusPainted(false);
+		MainScreen.setVisible(true);
+		add(MainScreen);
+		
 		key_setting = SettingsDialog.DEFAULTS;
 	}
+	
 
 	public void paint(Graphics g) {
-
 		// 1280X720��ŭ�� �̹����� ��������� screenImage�� �־���.
-		screenImage = createImage(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
-		screenGraphic = screenImage.getGraphics(); // screenImage�� �̿��� �׷����� ����.
+		//screenImage = createImage(Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
+		//screenGraphic = screenImage.getGraphics(); // screenImage�� �̿��� �׷����� ����.
 		//screenDraw(screenGraphic); // ��ũ���� �׷����� �׷���.
 		//screenGraphic.drawImage(background, 0, 0, null);
-		g.drawImage(background, 0, 0, null);
-		paintComponents(g);
+		//g.drawImage(background, 0, 0, null);
+		paintComponents(screenGraphic);
 		this.revalidate();
 		this.repaint();
+		//Toolkit.getDefaultToolkit().sync();
 		g.drawImage(screenImage, 0, 0, null);
+		//g.drawImage(background, 0, 0, null);
+		//Toolkit.getDefaultToolkit().sync();
 	}
 
 	// ��׶��� �̹����� �׷��ش�.
 	public void screenDraw(Graphics g) {
-		g.drawImage(background, 0, 0, null); // drawImage�� �߰��� ���� �ƴ϶� �ܼ��� ȭ�鿡 �̹����� ����� �� ���� �Լ��̴�.
+		//g.drawImage(MainScreen, 0, 0, null); // drawImage�� �߰��� ���� �ƴ϶� �ܼ��� ȭ�鿡 �̹����� ����� �� ���� �Լ��̴�.
 		if(isNormalModeScrren == true)
 		{
-			g.clearRect(0, 0, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
+			//g.clearRect(0, 0, Main.SCREEN_WIDTH, Main.SCREEN_HEIGHT);
 		}
 		paintComponents(g); // JLabel, ��ư ���� Main Frame�� �߰��� �͵��� �׷� �ִ� ������ ��.
 		this.revalidate();
