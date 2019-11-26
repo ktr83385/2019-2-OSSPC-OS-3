@@ -1,6 +1,6 @@
 # TETRIS. Open Source Software Project
 
-Open Sansi - KimSeonHu-DGU / Minji-0901 / hyeonazzz
+Open Source ISE - KimSeonHu-DGU / Minji-0901 / hyeonazzz
 
 
 ## About Project
