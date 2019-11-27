@@ -218,6 +218,15 @@ public class Tetris
 	public int spinTick;
 	public boolean justCleared;
 
+public int level=1;
+	
+	public int getLevel() {
+		return level;
+	}
+	public void setLevel(int level) {
+		this.level=level;
+	}
+	
 	protected PieceGenerator gen;
 
 	Tetris(PieceGenerator gen, int ahead)
