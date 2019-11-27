@@ -1,4 +1,5 @@
 package com.ok.ai;
+
 /*
 
 This program was written by Jacob Jackson. You may modify,
@@ -19,6 +20,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import javax.imageio.ImageIO;
+
+import com.ok.main.EffectSound;
 
 
 public class Tetris
@@ -202,8 +205,8 @@ public class Tetris
 	public long[] flash;
 	private boolean paused;
 	public int tickCount;
-	public int tickInterval;
-	public int tickThreshold;
+	public int tickInterval;//block speed
+	public int tickThreshold;//timer speed
 	public int ticksPerSecond;
 	public int maxDelays;
 	public int delays;
@@ -215,6 +218,16 @@ public class Tetris
 	public int spinTick;
 	public boolean justCleared;
 
+public int level=1;
+	
+	public int getLevel() {
+		return level;
+	}
+	public void setLevel(int level) {
+		this.level=level;
+		this.tickInterval=10/level; //속도 조절
+	}
+	
 	protected PieceGenerator gen;
 
 	Tetris(PieceGenerator gen, int ahead)
@@ -504,8 +517,19 @@ public class Tetris
 	{
 		paused = val;
 	}
+	public void eff_game_die() {
+		EffectSound game_die = new EffectSound();
+		while(true) {
+			try {
+				game_die.eff_game_die();
+			} catch(Exception e) {
+			}break;
+		}
+	}
+
 	protected void die()
 	{
+		eff_game_die();
 		dead = true;
 		paused = false;
 	}
