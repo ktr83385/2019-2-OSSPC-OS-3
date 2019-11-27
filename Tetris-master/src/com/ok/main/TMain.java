@@ -294,9 +294,6 @@ public class TMain extends JFrame {
 		add(exitBtn);
 		
 		MainScreen.setBounds(0,0, 1920, 1080);
-		//backBtn.setBorderPainted(false);
-		//backBtn.setContentAreaFilled(false);
-		//backBtn.setFocusPainted(false);
 		MainScreen.setVisible(true);
 		add(MainScreen);
 		
@@ -311,7 +308,7 @@ public class TMain extends JFrame {
 		//screenDraw(screenGraphic); // ��ũ���� �׷����� �׷���.
 		//screenGraphic.drawImage(background, 0, 0, null);
 		//g.drawImage(background, 0, 0, null);
-		paintComponents(screenGraphic);
+		paintComponents(g);
 		this.revalidate();
 		this.repaint();
 		//Toolkit.getDefaultToolkit().sync();
