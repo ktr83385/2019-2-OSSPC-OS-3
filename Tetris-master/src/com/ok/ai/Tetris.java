@@ -205,8 +205,8 @@ public class Tetris
 	public long[] flash;
 	private boolean paused;
 	public int tickCount;
-	public int tickInterval;
-	public int tickThreshold;
+	public int tickInterval;//block speed
+	public int tickThreshold;//timer speed
 	public int ticksPerSecond;
 	public int maxDelays;
 	public int delays;
@@ -225,6 +225,7 @@ public int level=1;
 	}
 	public void setLevel(int level) {
 		this.level=level;
+		this.tickInterval=10/level; //속도 조절
 	}
 	
 	protected PieceGenerator gen;
