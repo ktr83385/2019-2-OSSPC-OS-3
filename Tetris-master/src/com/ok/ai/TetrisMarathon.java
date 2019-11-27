@@ -30,6 +30,16 @@ public class TetrisMarathon extends Tetris
 		score += VALUES[cleared] * (combo + 1);
 		if (cleared >= 3)
 			combo++;
+		if(score>=550) setLevel(2);
+		if(score>=1400) setLevel(3);
+		if(score>=2850) setLevel(4);
+		if(score>=5200) setLevel(5);
+		if(score>=8750) setLevel(6);
+		if(score>=13800) setLevel(7);
+		if(score>=20650) setLevel(8);
+		if(score>=29600) setLevel(9);
+		if(score>=40950) setLevel(10);
+		if(score>=55000) setLevel(11);
 	}
 	public void onTSpin(int cleared, int x, int y, int rotation)
 	{
@@ -48,7 +58,7 @@ public class TetrisMarathon extends Tetris
 		g.drawString("" + score, x + 30, y + 10);
 		
 		g.setFont(F_TIME);
-		
+		g.drawString("Level: "+getLevel(), x+140, y+20);
 		g.drawString("" + linesCleared + " lines", x + 140, y + 32);
 		g.drawString(getTimeString(), x + 30, y + 32);
 		if (combo > 0)
