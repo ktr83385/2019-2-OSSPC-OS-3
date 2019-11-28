@@ -38,7 +38,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	
 	public static JButton restartButton;
 	public static JButton aiRestartButton;
-	public static JButton swapButton;
+	//public static JButton swapButton;
 	private static final int OFF_SPEED = 50;
 	private static final int SLOW_SPEED = 400;
 	private static final int MED_SPEED = 125;
@@ -93,7 +93,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 
 	public TetrisRenderer()
 	{
-		frame.setUndecorated(true);
+		//frame.setUndecorated(true);
 		//exitButton.setBounds(1245, 0, 30, 30);
 		exitButton.setBounds(490, 0, 30, 30);
 		exitButton.setBorderPainted(false);
@@ -173,6 +173,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				aiRestartButton.setFont(new Font("digital-7", Font.BOLD, 13));
 				aiRestartButton.setBackground(Color.WHITE);
 				
+				/*
 				swapButton = new JButton("\u2194");
 				swapButton.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
 				swapButton.setSize(70, 30);
@@ -180,6 +181,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				swapButton.setFocusable(false);
 				frame.getContentPane().add(swapButton);
 				swapButton.setBackground(Color.WHITE);
+				 */
 		
 				group = new ButtonGroup();
 				
