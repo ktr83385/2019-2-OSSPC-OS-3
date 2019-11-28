@@ -94,6 +94,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	public TetrisRenderer()
 	{
 		//frame.setUndecorated(true);
+		frame.setResizable(true); //Resize the screen using the mouse
 		//exitButton.setBounds(1245, 0, 30, 30);
 		
 		/*
@@ -265,7 +266,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				}
 				catch (Exception ex) {}
 
-				frame.setResizable(false);
+			
 			
 				frame.pack();
 				//frame.setSize(1280,720);
