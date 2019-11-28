@@ -349,8 +349,9 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			     // aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100);
 			      //aiRestartButton.setVisible(aiGame.isOver());
 			      
-			      game.drawTo((Graphics2D)(g), 100, 100);
+			      game.drawTo((Graphics2D)(g), (int)(frame.getSize().width/3), (int)(frame.getSize().height/5)); //The play Screen can move according to the size of the frame
 				  //restartButton.setVisible(game.isOver());
+
 			      
 			      g.setColor(Color.WHITE);
 			     // g.drawRoundRect(AI_SPEED_X - 9, AI_SPEED_Y+1, 82, 120, 20, 20);
