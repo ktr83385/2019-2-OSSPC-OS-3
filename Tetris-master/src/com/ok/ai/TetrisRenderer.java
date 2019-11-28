@@ -94,7 +94,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	public TetrisRenderer()
 	{
 		//frame.setUndecorated(true);
-		frame.setResizable(true); //Resize the screen using the mouse
+		frame.setResizable(true); //Resize the Game screen using the mouse
 		//exitButton.setBounds(1245, 0, 30, 30);
 		
 		/*
@@ -241,10 +241,11 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				
 				frame.getContentPane().add(this);
 					
-				/*
-				medButton.setSelected(true);
+				
+				//medButton.setSelected(true);
 				keyButton.addActionListener(this);
 				newButton.addActionListener(this);
+				/*
 				offButton.addActionListener(this);
 				slowButton.addActionListener(this);
 				medButton.addActionListener(this);
@@ -333,11 +334,11 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				//매인 프레임 설정
 			      g.setColor(Color.BLUE); //배경색 변경
 			      
-			      g.fillRect(0, 0, frame.getSize().width, frame.getSize().height);     
+			      g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size    
 			      //aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100); //ai게임창 지워짐.
 			      //aiRestartButton.setVisible(aiGame.isOver());
 			      
-			      game.drawTo((Graphics2D)(g), 100, 100);
+			      //game.drawTo((Graphics2D)(g), 100, 100);
 			     //restartButton.setVisible(game.isOver());
 			      
 			      
