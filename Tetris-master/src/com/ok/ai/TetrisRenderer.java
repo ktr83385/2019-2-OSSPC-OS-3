@@ -95,6 +95,8 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	{
 		//frame.setUndecorated(true);
 		//exitButton.setBounds(1245, 0, 30, 30);
+		
+		/*
 		exitButton.setBounds(490, 0, 30, 30);
 		exitButton.setBorderPainted(false);
 		exitButton.setContentAreaFilled(false);
@@ -122,9 +124,11 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			}
 		});
 		frame.add(exitButton);
-		
+		*/
 		
 		//menuBar.setBounds(0, 0, 1280, 30);
+		
+		/*
 		menuBar.setBounds(0, 0, 520, 30);
 				menuBar.addMouseListener(new MouseAdapter() {
 					public void mousePressed(MouseEvent e) { // 챘짠�녍�큄째챙힋짚 챠혖쨈챘짝짯 챙�뮴� x,y 챙짖흸챠�샚벭ヂΒ� 챙�벬뼙р�벬늘��쑣�.
@@ -140,7 +144,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 					}
 				});
 				frame.add(menuBar);
-				
+			*/	
 				newButton = new JButton("New Game...");
 				newButton.setSize(newButton.getPreferredSize());
 				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 160, 485);
@@ -163,7 +167,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				frame.getContentPane().add(restartButton);
 				restartButton.setFont(new Font("digital-7", Font.BOLD, 13));
 			    restartButton.setBackground(Color.WHITE);
-				
+				/*
 				aiRestartButton = new JButton("Restart");
 				aiRestartButton.setSize(aiRestartButton.getPreferredSize());
 				//aiRestartButton.setLocation(125 + Tetris.PIXEL_W + Tetris.FIELD_W / 2 + Tetris.DSP_W - aiRestartButton.getWidth() / 2 + 160, 375);
@@ -172,7 +176,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				frame.getContentPane().add(aiRestartButton);
 				aiRestartButton.setFont(new Font("digital-7", Font.BOLD, 13));
 				aiRestartButton.setBackground(Color.WHITE);
-				
+				*/
 				/*
 				swapButton = new JButton("\u2194");
 				swapButton.setFont(new Font(Font.DIALOG, Font.BOLD, 24));
@@ -182,7 +186,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				frame.getContentPane().add(swapButton);
 				swapButton.setBackground(Color.WHITE);
 				 */
-		
+			    /*
 				group = new ButtonGroup();
 				
 				offButton = new JRadioButton("Off");
@@ -230,18 +234,13 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				
 				insaneButton.setBackground(Color.BLACK);
 				insaneButton.setForeground(Color.WHITE);
-
+				*/
 				frame.addKeyListener(this);
 				frame.setFocusable(true);
 				
 				frame.getContentPane().add(this);
-
-				/* 여기에만 넣으면 다가려짐(배경색 변경 코드)
-				Color b = new Color(120,255,0);
-				JPanel c = new JPanel();
-				c.setBackground(b);
-				frame.add(c);
-				*/
+					
+				/*
 				medButton.setSelected(true);
 				keyButton.addActionListener(this);
 				newButton.addActionListener(this);
@@ -253,7 +252,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				restartButton.addActionListener(this);
 				//aiRestartButton.addActionListener(this);
 				//swapButton.addActionListener(this);
-
+				*/
 				try {
 					ClassLoader loader = Thread.currentThread().getContextClassLoader();
 					ArrayList<Image> icons = new ArrayList<Image>();
@@ -271,14 +270,6 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				frame.pack();
 				//frame.setSize(1280,720);
 				
-				/*
-				 * 
-				 * <프레임 배경색 변경>
-				Color b = new Color(120,255,0);
-				JPanel c = new JPanel();
-				c.setBackground(b);
-				frame.add(c);
-				*/ 
 				
 				frame.setSize(520,720); //게임 사이즈 조절
 				frame.setLocationRelativeTo(null); //화면 가운데에 나타나게 하기
