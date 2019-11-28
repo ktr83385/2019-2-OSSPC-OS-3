@@ -333,7 +333,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				//매인 프레임 설정
 			      g.setColor(Color.BLUE); //배경색 변경
 			      
-			      g.fillRect(0, 0, 1280, 720);     
+			      g.fillRect(0, 0, frame.getSize().width, frame.getSize().height);     
 			      //aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100); //ai게임창 지워짐.
 			      //aiRestartButton.setVisible(aiGame.isOver());
 			      
