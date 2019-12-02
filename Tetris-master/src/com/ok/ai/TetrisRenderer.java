@@ -93,7 +93,10 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 
 	public TetrisRenderer()
 	{
-		frame.setUndecorated(true);
+		//frame.setUndecorated(true);
+		frame.setLocationRelativeTo(null);
+		frame.setResizable(true);
+		
 		//exitButton.setBounds(1245, 0, 30, 30);
 		exitButton.setBounds(490, 0, 30, 30);
 		exitButton.setBorderPainted(false);
@@ -264,7 +267,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				}
 				catch (Exception ex) {}
 
-				frame.setResizable(false);
+				//frame.setResizable(false);
 			
 				frame.pack();
 				//frame.setSize(1280,720);
@@ -279,8 +282,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				*/ 
 				
 				frame.setSize(520,720); //게임 사이즈 조절
-				frame.setLocationRelativeTo(null); //화면 가운데에 나타나게 하기
-				frame.setVisible(true);
+					frame.setVisible(true);
 				
 			
 				System.setProperty("awt.useSystemAAFontSettings","on");
@@ -343,7 +345,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			      //aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100); //ai게임창 지워짐.
 			      //aiRestartButton.setVisible(aiGame.isOver());
 			      
-			      game.drawTo((Graphics2D)(g), 100, 100);
+			      //game.drawTo((Graphics2D)(g), 100, 100);
 			     //restartButton.setVisible(game.isOver());
 			      
 			      
