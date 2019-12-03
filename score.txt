@@ -1,0 +1,12 @@
+      nam2 0
+          test1 0
+      test001 0
+     test002 0
+test002 0
+ test003 0
+                   test04 0
+test44 0
+aaa 0
+aaa 0
+nam001 1000
+nam002 525

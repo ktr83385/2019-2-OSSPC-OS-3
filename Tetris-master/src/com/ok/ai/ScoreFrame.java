@@ -11,14 +11,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
 public class ScoreFrame extends JFrame{
-	
-	TetrisMarathon marathon  = new TetrisMarathon();
+	public static final long serialVersionUID = 1L;
+
+	TetrisMarathon marathon = new TetrisMarathon();
 	
 	Scanner file;
 	JLabel j[] = new JLabel[12];
@@ -52,6 +52,7 @@ public class ScoreFrame extends JFrame{
 				int num  = lineScan.nextInt();
 				rank.add(new UserList(id1, num));
 				length++;
+				lineScan.close();
 			}
 		} catch (Exception ex) {
 			System.out.println("파일을 여는데 문제가 생겼습니다");
@@ -120,6 +121,7 @@ public class ScoreFrame extends JFrame{
 				int num  = lineScan.nextInt();
 				rank.add(new UserList(id1, num));
 				length++;
+				lineScan.close();
 			}
 		} catch (Exception ex) {
 			System.out.println("파일을 여는데 문제가 생겼습니다");

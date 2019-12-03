@@ -14,7 +14,7 @@ import java.awt.RenderingHints;
 public class TetrisMarathon extends Tetris
 {
 	public int score = 0;
-	protected static int finalScore;
+	public  static int finalScore;
 	
 	public static final int[] VALUES = {0, 100, 175, 350, 700, 1000};
 	
