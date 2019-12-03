@@ -90,13 +90,15 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	public int gameType;
 	private int mouseX, mouseY;
 	Thread thread;
-
+	
+	public Dimension getMinimunSize(){
+		return new Dimension(1000,720);
+	}
 	public TetrisRenderer()
 	{
 		//frame.setUndecorated(true);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(true);
-		
 		frame.setResizable(true); //Resize the Game screen using the mouse
 
 		//exitButton.setBounds(1245, 0, 30, 30);
@@ -150,16 +152,24 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				});
 				frame.add(menuBar);
 			*/	
-				newButton = new JButton("New Game...");
+			newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-play.png")));
+		    newButton.setBorderPainted(false);
+		    newButton.setContentAreaFilled(false);
+		    newButton.setFocusPainted(false);
+	
 				newButton.setSize(newButton.getPreferredSize());
-				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 160, 485);
+				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 260, 585);
 				newButton.setFocusable(false);
 				frame.getContentPane().add(newButton);
 			    newButton.setBackground(Color.WHITE);
 				
-				keyButton = new JButton("Settings");
+				
+			    keyButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-help.png")));
+			    keyButton.setBorderPainted(false);
+			    keyButton.setContentAreaFilled(false);
+			    keyButton.setFocusPainted(false);
 				keyButton.setSize(newButton.getWidth(), keyButton.getPreferredSize().height);
-				keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 160, 450);
+				keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 200, 585);
 				keyButton.setFocusable(false);
 				frame.getContentPane().add(keyButton);
 			    keyButton.setBackground(Color.WHITE);
@@ -277,7 +287,8 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				//frame.setSize(1280,720);
 				
 				
-				frame.setSize(520,720); //게임 사이즈 조절
+				frame.setSize(1000,720); //게임 사이즈 조절
+				frame.setMinimumSize(getMinimunSize());
 					frame.setVisible(true);
 				
 			
