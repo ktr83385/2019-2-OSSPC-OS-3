@@ -94,7 +94,11 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	public TetrisRenderer()
 	{
 		//frame.setUndecorated(true);
+		frame.setLocationRelativeTo(null);
+		frame.setResizable(true);
+		
 		frame.setResizable(true); //Resize the Game screen using the mouse
+
 		//exitButton.setBounds(1245, 0, 30, 30);
 		
 		/*
@@ -267,15 +271,14 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				}
 				catch (Exception ex) {}
 
-			
-			
+
+				//frame.setResizable(false);			
 				frame.pack();
 				//frame.setSize(1280,720);
 				
 				
 				frame.setSize(520,720); //게임 사이즈 조절
-				frame.setLocationRelativeTo(null); //화면 가운데에 나타나게 하기
-				frame.setVisible(true);
+					frame.setVisible(true);
 				
 			
 				System.setProperty("awt.useSystemAAFontSettings","on");
