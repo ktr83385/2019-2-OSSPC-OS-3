@@ -158,7 +158,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 		    newButton.setFocusPainted(false);
 	
 				newButton.setSize(newButton.getPreferredSize());
-				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 260, 585);
+				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 250 , 600);
 				newButton.setFocusable(false);
 				frame.getContentPane().add(newButton);
 			    newButton.setBackground(Color.WHITE);
@@ -169,7 +169,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			    keyButton.setContentAreaFilled(false);
 			    keyButton.setFocusPainted(false);
 				keyButton.setSize(newButton.getWidth(), keyButton.getPreferredSize().height);
-				keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 200, 585);
+				keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 320, 600);
 				keyButton.setFocusable(false);
 				frame.getContentPane().add(keyButton);
 			    keyButton.setBackground(Color.WHITE);
@@ -346,7 +346,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			    Image backImage = Toolkit.getDefaultToolkit().getImage("framge.img");
 			    g.drawImage(backImage,0,0,getWidth(),getHeight(),this);
 				//매인 프레임 설정
-			      g.setColor(Color.BLUE); //배경색 변경
+			      g.setColor(Color.black); //배경색 변경
 			      
 			      g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size    
 			      //aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100); //ai게임창 지워짐.
