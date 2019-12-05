@@ -13,7 +13,7 @@ public class EffectSound {
         AudioFormat format;
         DataLine.Info info;
 
-        eff_game_die = new File("Sound/game_die.wav");
+        eff_game_die = new File("../Sound/game_die.wav");
 
         Clip clip;
 
