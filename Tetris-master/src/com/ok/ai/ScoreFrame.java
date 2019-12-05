@@ -106,7 +106,7 @@ public class ScoreFrame extends JFrame{
 		setVisible(true);
 	}
 
-	ScoreFrame() {
+	public ScoreFrame() {
 		super("기록");	
 		ArrayList<UserList> rank = new ArrayList<UserList>();
 		int length = 0;
