@@ -1,11 +1,5 @@
 package com.ok.ai;
-/*
 
-This program was written by Jacob Jackson. You may modify,
-copy, or redistribute it in any way you wish, but you must
-provide credit to me if you use it in your own program.
-
-*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -27,9 +21,6 @@ public class GameTypeDialog implements ActionListener
 	
 	private ButtonGroup group;
 	private JRadioButton marathonButton;
-	private JRadioButton sprintButton;
-	private JRadioButton matchButton;
-	private JRadioButton battleButton;
 	
 	private JButton okButton;
 	private JButton cancelButton;
@@ -44,7 +35,7 @@ public class GameTypeDialog implements ActionListener
 		
 		JRadioButton button;
 		
-		button = new JRadioButton("Marathon");
+		button = new JRadioButton("NEW GAME");
 		button.setSize(button.getPreferredSize());
 		button.setLocation(40, 20);
 		button.addActionListener(this);
@@ -52,43 +43,7 @@ public class GameTypeDialog implements ActionListener
 		group.add(button);
 		pane.add(button);
 		marathonButton = button;
-		
-		button = new JRadioButton("Sprint");
-		button.setSize(button.getPreferredSize());
-		button.setLocation(40, 45);
-		button.addActionListener(this);
-		button.setVisible(true);
-		group.add(button);
-		pane.add(button);
-		sprintButton = button;
-		
-		button = new JRadioButton("Battle (clear garbage by sending more lines)");
-		button.setSize(button.getPreferredSize());
-		button.setLocation(40, 70);
-		button.addActionListener(this);
-		button.setVisible(true);
-		group.add(button);
-		pane.add(button);
-		matchButton = button;
-		
-		button = new JRadioButton("Battle (clear garbage with tetriminos)");
-		button.setSize(button.getPreferredSize());
-		button.setLocation(40, 95);
-		button.addActionListener(this);
-		button.setVisible(true);
-		group.add(button);
-		pane.add(button);
-		battleButton = button;
 
-		if (def == TetrisRenderer.MARATHON)
-			marathonButton.setSelected(true);
-		if (def == TetrisRenderer.SPRINT)
-			sprintButton.setSelected(true);
-		if (def == TetrisRenderer.BATTLE)
-			matchButton.setSelected(true);
-		if (def == TetrisRenderer.BATTLE_GARBAGE)
-			battleButton.setSelected(true);
-		
 		choice = def;
 		
 		okButton = new JButton(okString);
@@ -120,13 +75,7 @@ public class GameTypeDialog implements ActionListener
 		
 		if (source == marathonButton)
 			choice = TetrisRenderer.MARATHON;
-		if (source == sprintButton)
-			choice = TetrisRenderer.SPRINT;
-		if (source == matchButton)
-			choice = TetrisRenderer.BATTLE;
-		if (source == battleButton)
-			choice = TetrisRenderer.BATTLE_GARBAGE;
-		
+
 		if (source == okButton)
 			dialog.setVisible(false);
 		if (source == cancelButton)
