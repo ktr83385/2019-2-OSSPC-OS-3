@@ -17,6 +17,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import com.ok.ai.ScoreFrame;
 import com.ok.ai.SettingsDialog;
 import com.ok.ai.TetrisRenderer;
 import com.ok.window.Tetris;
@@ -53,6 +54,12 @@ public class TMain extends JFrame {
 	private ImageIcon singleBasicImage = new ImageIcon(Main.class.getResource("../images/Start.png"));
 	private ImageIcon singleEnteredImage = new ImageIcon(Main.class.getResource("../images/StartRed.png"));
 	private JButton singleBtn = new JButton(singleBasicImage);
+	
+	//Ranking button
+	private Image rankingImage = new ImageIcon(Main.class.getResource("../images/Ranking.png")).getImage();
+	private ImageIcon rankingBasicImage = new ImageIcon(Main.class.getResource("../images/Ranking.png"));
+	private ImageIcon rankingEnteredImage = new ImageIcon(Main.class.getResource("../images/RankingRed.png"));
+	private JButton rankBtn = new JButton(rankingBasicImage);
 
 	// Normal button ���� ��ü ����
 	private Image normalImage = new ImageIcon(Main.class.getResource("../images/NormalBasic.png")).getImage();
@@ -184,6 +191,32 @@ public class TMain extends JFrame {
 			}
 		});
 		add(singleBtn);
+		//(rankBtn)
+		rankBtn.setBounds(755, 800, 410, 110);
+		rankBtn.setBorderPainted(false);
+		rankBtn.setContentAreaFilled(false);
+		rankBtn.setFocusPainted(false);
+		// exit Button �̺�Ʈ ó��
+		rankBtn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				rankBtn.setIcon(rankingEnteredImage); // ���콺�� exit ��ư�� �ö󰡸� �̹����� �ٲ���.
+				rankBtn.setCursor(new Cursor(Cursor.HAND_CURSOR)); // ���콺�� �ö󰡸� �հ��� ������ιٲ�
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				rankBtn.setIcon(rankingBasicImage);
+				rankBtn.setCursor(new Cursor(Cursor.DEFAULT_CURSOR)); // ���콺�� ���� �ٽ� ����Ʈ ������� �ٲ�
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+				// �̱� ��� ���� �̺�Ʈó�� �κ�
+				new ScoreFrame();
+			}
+		});
+		add(rankBtn);
 
 		// Hard ��ư ���� ó��
 		hardBtn.setBounds(130, 340, 400, 100);
