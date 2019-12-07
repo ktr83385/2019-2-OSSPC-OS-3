@@ -29,12 +29,27 @@ public class Tetris
 	public static final int W = 10;
 	public static final int H = 20;
 
-	protected static final int SQR_W = 20;
-	public static final int DSP_W = 70;
-	public static final int FIELD_W = W * SQR_W;
-	public static final int FIELD_H = H * SQR_W;
-	public static final int PIXEL_W = FIELD_W + DSP_W * 2;
-	public static final int PIXEL_H = FIELD_H + 60;
+	protected static int SQR_W = 20;
+	public static int DSP_W = 70;
+	public static int FIELD_W = W * SQR_W;
+	public static int FIELD_H = H * SQR_W;
+	public void setSQR_W(int sqr_W) {
+		this.SQR_W=sqr_W;
+		this.FIELD_W=W*sqr_W;
+		this.FIELD_H=H*sqr_W;
+		
+	}
+	public int getSQR_W() {
+		return SQR_W;
+	}
+	public void setDSP_W(int dsp_w) {
+		this.DSP_W=dsp_w;
+	}
+	public int getDSP_W() {
+		return DSP_W;
+	}
+	public static int PIXEL_W = FIELD_W + DSP_W * 2;
+	public static int PIXEL_H = FIELD_H + 60;
 	public static boolean isIDFrame = false;
 	
 	protected static final int TSPIN_ANIMATION_TICKS = 3;
