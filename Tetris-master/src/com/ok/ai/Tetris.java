@@ -1050,14 +1050,14 @@ public int level=1;
 			drawTetrimino(g, fMoves[i], x + FIELD_W + DSP_W / 2, y + (int)(SQR_W*2.5) + yoffset, (int)(SQR_W/2));
 		}
 		g.setColor(Color.WHITE);
-		g.drawRect(x + FIELD_W + 10 + 1, y + 20 + 1, 50 - 2, 50 - 2);
+		//g.drawRect(x + FIELD_W + 10 + 1, y + 20 + 1, 50 - 2, 50 - 2);
 
 
 		g.setColor(Color.WHITE);
-		g.drawRect(x, y-84, 200, 70);
+		//g.drawRect(x, y-84, 200, 70);
 
 		g.setColor (Color.WHITE);
-		g.drawRoundRect(x, y-84, 200, 70, 20, 20);
+		g.drawRoundRect(x, y-84, SQR_W*10, DSP_W, 20, 20); //보드판 크기 리사이징
 		
 		if (dead)
 		{ 
