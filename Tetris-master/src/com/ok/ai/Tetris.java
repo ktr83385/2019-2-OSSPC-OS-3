@@ -33,10 +33,20 @@ public class Tetris
 	public static int DSP_W = 70;
 	public static int FIELD_W = W * SQR_W;
 	public static int FIELD_H = H * SQR_W;
+	protected static Font F_LINES = new Font("digital-7", Font.BOLD, (int)(SQR_W*1.2));
+	protected static Font F_TIME = new Font(Font.SANS_SERIF, Font.BOLD, (int)(SQR_W*0.7));
+	protected static Font F_UI = new Font("digital-7", Font.BOLD, (int)(SQR_W*0.7));
+	protected static Font F_PAUSE = new Font("digital-7", Font.BOLD, (int)(SQR_W*1.8));
+	protected static Font F_GAMEOVER = new Font("digital-7", Font.BOLD, (int)(SQR_W*2.4));
 	public void setSQR_W(int sqr_W) {
 		this.SQR_W=sqr_W;
 		this.FIELD_W=W*sqr_W;
 		this.FIELD_H=H*sqr_W;
+		this.F_LINES = new Font("digital-7", Font.BOLD, (int)(sqr_W*1.2));
+		this.F_TIME = new Font(Font.SANS_SERIF, Font.BOLD, (int)(sqr_W*0.7));
+		this.F_UI = new Font("digital-7", Font.BOLD, (int)(SQR_W*0.7));
+		this.F_PAUSE = new Font("digital-7", Font.BOLD, (int)(SQR_W*1.8));
+		this.F_GAMEOVER = new Font("digital-7", Font.BOLD, (int)(SQR_W*2.4));
 		
 	}
 	public int getSQR_W() {
@@ -863,11 +873,11 @@ public int level=1;
 	protected static final Color C_NOTICE = new Color(255, 255, 255, 225);
 												// I, S, T, O, Z, L, J
 	protected static final Color[] COLORS = {null, Color.CYAN, Color.RED, Color.MAGENTA, Color.YELLOW, Color.GREEN, Color.ORANGE, new Color(100, 150, 255), new Color(190, 190, 190)};
-	protected static final Font F_LINES = new Font("digital-7", Font.BOLD, 24);
-	protected static final Font F_TIME = new Font(Font.SANS_SERIF, Font.BOLD, 14);
-	protected static final Font F_UI = new Font("digital-7", Font.BOLD, 14);
-	protected static final Font F_PAUSE = new Font("digital-7", Font.BOLD, 36);
-	protected static final Font F_GAMEOVER = new Font("digital-7", Font.BOLD, 48);
+//	protected static final Font F_LINES = new Font("digital-7", Font.BOLD, 24);
+//	protected static final Font F_TIME = new Font(Font.SANS_SERIF, Font.BOLD, 14);
+//	protected static final Font F_UI = new Font("digital-7", Font.BOLD, 14);
+//	protected static final Font F_PAUSE = new Font("digital-7", Font.BOLD, 36);
+//	protected static final Font F_GAMEOVER = new Font("digital-7", Font.BOLD, 48);
 	
 	public void drawTo(Graphics2D g, int x, int y)
 	{
