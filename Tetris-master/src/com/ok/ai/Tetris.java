@@ -1037,7 +1037,7 @@ public int level=1;
 			int yoffset = i * 50 + (i > 0 ? 8 : 0);
 			
 			g.drawRect(x + FIELD_W + 10, y + 20 + yoffset, (int)(SQR_W*2.5), (int)(SQR_W*2.5)); //Next의 네모칸들
-			drawTetrimino(g, fMoves[i], x + FIELD_W + DSP_W / 2, y + 45 + yoffset, 10);
+			drawTetrimino(g, fMoves[i], x + FIELD_W + DSP_W / 2, y + (int)(SQR_W*2.5) + yoffset, (int)(SQR_W/2));
 		}
 		g.setColor(Color.WHITE);
 		g.drawRect(x + FIELD_W + 10 + 1, y + 20 + 1, 50 - 2, 50 - 2);

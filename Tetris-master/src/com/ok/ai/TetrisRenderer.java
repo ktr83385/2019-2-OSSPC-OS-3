@@ -340,7 +340,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				background.setContentAreaFilled(false);
 				background.setFocusPainted(false);
 				background.setVisible(true);
-				frame.add(background); //add game play screen background image
+				//frame.add(background); //add game play screen background image
 			}
 			
 			public Dimension getPreferredSize()
