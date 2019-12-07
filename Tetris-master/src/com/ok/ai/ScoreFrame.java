@@ -23,7 +23,7 @@ public class ScoreFrame extends JFrame{
 	Scanner file;
 	JLabel j[] = new JLabel[12];
 	
-	ScoreFrame(String name,int sc) {
+	public ScoreFrame(String name,int sc) {
 		super("기록");
 		
 		ArrayList<UserList> rank = new ArrayList<UserList>();

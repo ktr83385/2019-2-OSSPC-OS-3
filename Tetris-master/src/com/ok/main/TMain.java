@@ -213,7 +213,9 @@ public class TMain extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				// �̱� ��� ���� �̺�Ʈó�� �κ�
-				new ScoreFrame();
+				String str="";
+				int score=0;
+				ScoreFrame sf = new ScoreFrame(str,score);
 			}
 		});
 		add(rankBtn);
