@@ -354,9 +354,9 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			    Image backImage = Toolkit.getDefaultToolkit().getImage("framge.img");
 			    g.drawImage(backImage,0,0,getWidth(),getHeight(),this);
 				//매인 프레임 설정
-			      g.setColor(Color.black); //배경색 변경
+			  
 			      
-			      g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size    
+			      //g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size    
 			      //aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100); //ai게임창 지워짐.
 			      //aiRestartButton.setVisible(aiGame.isOver());
 			      
@@ -365,7 +365,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			      
 			      
 			      
-			      g.setColor(Color.WHITE);
+			      //g.setColor(Color.WHITE);
 			      //g.drawRect(AI_SPEED_X - 9, AI_SPEED_Y+1, 82, 120); 
 			      
 			     // aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100);
@@ -375,7 +375,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				  //restartButton.setVisible(game.isOver());
 
 			      
-			      g.setColor(Color.WHITE);
+			      //g.setColor(Color.WHITE);
 			     // g.drawRoundRect(AI_SPEED_X - 9, AI_SPEED_Y+1, 82, 120, 20, 20);
 			}
 
