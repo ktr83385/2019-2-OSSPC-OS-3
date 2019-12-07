@@ -1065,7 +1065,7 @@ public int level=1;
 			g.fillRect(x, y, FIELD_W, FIELD_H);
 			
 			g.setColor(new Color(0, 0, 0, 150));
-			RoundRectangle2D rect = new RoundRectangle2D.Float(x + 15, y - 80 + FIELD_H / 2, FIELD_W - 30, 130, 15, 15);
+			RoundRectangle2D rect = new RoundRectangle2D.Float(x + 15, y - 80 + FIELD_H / 2, FIELD_W - (int)(SQR_W*1.5), (int)(SQR_W*6.5), 15, 15);
 			g.fill(rect);
 			g.setColor(Color.WHITE);
 			g.draw(rect);
