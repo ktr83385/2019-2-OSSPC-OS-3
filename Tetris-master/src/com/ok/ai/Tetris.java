@@ -1020,10 +1020,10 @@ public int level=1;
 			}
 		}
 
-		g.setColor(Color.WHITE);
+		g.setColor(Color.WHITE);//hold글씨, 박스 색상
 		g.setFont(F_UI);
 		drawCentered(g, "Hold", x - DSP_W / 2, y + 10);
-		g.drawRect(x - DSP_W + 10, y + 20, 50, 50);
+		g.drawRect(x - DSP_W + DSP_W/7, y + 20, (int)(SQR_W*2.5), (int)(SQR_W*2.5));
 
 		if (stored != -1)
 			drawTetrimino(g, stored, x - DSP_W / 2, y + 45, 10);
