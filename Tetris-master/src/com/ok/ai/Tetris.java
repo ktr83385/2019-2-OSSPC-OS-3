@@ -1092,7 +1092,7 @@ public int level=1;
 			int wid = m.stringWidth("PAUSED");
 			
 			g.setColor(new Color(0, 0, 0, 120));
-			RoundRectangle2D rect = new RoundRectangle2D.Float(x + FIELD_W / 2 - wid / 2 - 15, y - 5 - 28 + FIELD_H / 2, wid + 30, 50, 10, 5);
+			RoundRectangle2D rect = new RoundRectangle2D.Float(x + FIELD_W / 2 - wid / 2 - 15, y - 5 - 28 + FIELD_H / 2, wid + (int)(SQR_W*1.5), (int)(SQR_W*2.5), 10, 5);
 			g.fill(rect);
 			g.setColor(Color.WHITE);
 			g.draw(rect);
