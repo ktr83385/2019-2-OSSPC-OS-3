@@ -96,24 +96,5 @@ public class TetrisAI
 		return best;
 	}
 
-	/*
-	private static class Comp implements Comparator<Tetris>
-	{
-		public int compare(Tetris t1, Tetris t2)
-		{
-			if (t1 == null)
-				if (t2 == null)
-					return 0;
-				else
-					return 1;
-			if (t2 == null)
-				return -1;
 
-			if (t1.tx > t2.tx)
-				return 1;
-			if (t1.tx < t2.tx)
-				return -1;
-			return 0;
-		}
-	}*/
 }
