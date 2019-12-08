@@ -87,7 +87,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 	private ImageIcon exitButtonBasicImage = new ImageIcon(Main.class.getResource("../images/exitButtonBasic.png"));
 	private ImageIcon exitButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/exitButtonEntered.png"));
 	private JButton exitButton = new JButton(exitButtonBasicImage);
-	private ImageIcon backgroundImage = new ImageIcon(Main.class.getResource("../images/IntroBackground.png")); //background image
+	private ImageIcon backgroundImage = new ImageIcon(Main.class.getResource("../images/test0101.png")); //background image
 	public JButton background = new JButton(backgroundImage);
 	public int gameType;
 	private int mouseX, mouseY;
@@ -291,7 +291,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				
 				frame.setSize(1000,720); //게임 사이즈 조절
 				frame.setMinimumSize(getMinimunSize());
-					frame.setVisible(true);
+				frame.setVisible(true);
 				
 			
 				System.setProperty("awt.useSystemAAFontSettings","on");
@@ -340,7 +340,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				background.setContentAreaFilled(false);
 				background.setFocusPainted(false);
 				background.setVisible(true);
-				//frame.add(background); //add game play screen background image
+				frame.add(background); //add game play screen background image
 			}
 			
 			public Dimension getPreferredSize()
@@ -353,7 +353,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				super.paint(g);
 		
 				//매인 프레임 설정 
-			    g.setColor(Color.BLACK); //set Black Screen
+			    //g.setColor(Color.BLACK); //set Black Screen
 			  
 			     	
 			    g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size  & set Black Screen  
