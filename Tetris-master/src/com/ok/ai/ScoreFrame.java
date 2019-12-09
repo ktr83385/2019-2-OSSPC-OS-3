@@ -34,7 +34,7 @@ public class ScoreFrame extends JFrame{
 		
 		PrintWriter pw = null;
 		try {
-			pw = new PrintWriter(new FileWriter("score.txt", true));
+			pw = new PrintWriter(new FileWriter("../score.txt", true));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -43,7 +43,7 @@ public class ScoreFrame extends JFrame{
 		pw.flush();
 		
 		try {
-			file = new Scanner(new File("score.txt"));
+			file = new Scanner(new File("../score.txt"));
 			String line;
 			while (file.hasNext()) {
 				line = file.nextLine();
@@ -112,7 +112,7 @@ public class ScoreFrame extends JFrame{
 		int length = 0;
 		
 		try {
-			file = new Scanner(new File("score.txt"));
+			file = new Scanner(new File("../score.txt"));
 			String line;
 			while (file.hasNext()) {
 				line = file.nextLine();
