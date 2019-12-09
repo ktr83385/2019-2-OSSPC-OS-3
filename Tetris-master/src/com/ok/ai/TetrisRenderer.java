@@ -356,7 +356,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			    //g.setColor(Color.BLACK); //set Black Screen
 			  
 			     	
-			    g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size  & set Black Screen  
+			    //g.fillRect(0, 0, frame.getSize().width, frame.getSize().height); //Resize background to match frame size  & set Black Screen  
 			      //aiGame.drawTo((Graphics2D)(g), Tetris.PIXEL_W + 400, 100); //ai게임창 지워짐.
 			      //aiRestartButton.setVisible(aiGame.isOver());
 			      
