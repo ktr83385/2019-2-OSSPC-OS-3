@@ -12,7 +12,19 @@ public class Main {
 	
 	public static int SCREEN_WIDTH = 0;
 	public static int SCREEN_HEIGHT = 0;
+	public static boolean mute=true;
 	
+	
+	public static boolean getMute() {
+		return mute;
+	}
+
+
+	public static void setMute(boolean mute) {
+		Main.mute = mute;
+	}
+
+
 	public static void main(String[] args) {
 		
 		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -22,7 +34,7 @@ public class Main {
 		new TMain();
 		
 		BGM sound_bgm = new BGM();
-		while(true) {
+		while(getMute()) {
 			try {
 				sound_bgm.abc();
 				Thread.sleep(192000); // replay

@@ -22,13 +22,16 @@ import javax.imageio.*;
 @SuppressWarnings("serial")
 public class TetrisRenderer extends Component implements KeyListener, ActionListener
 {
+	public static Main m = new Main();
 	public static final String VERSION = "1.1";
 	public static int num=0;
 	public static JFrame frame = new JFrame("Tetris");
 
 	public static JButton keyButton;
 	public static JButton newButton;
-
+	public static JButton homeButton;
+	
+	
 	public static JRadioButton offButton;
 	public static JRadioButton slowButton;
 	public static JRadioButton medButton;
@@ -111,7 +114,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 		exitButton.setContentAreaFilled(false);
 		exitButton.setFocusPainted(false);
 		// exit Button 챙혶쨈챘짼짚챠힋쨍 챙짼�쑦ヂ┑�
-		exitButton.addMouseListener(new MouseAdapter() {
+		 * 		exitButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				exitButton.setIcon(exitButtonEnteredImage); // 챘짠�녍�큄째챙힋짚챗째�궗 exit 챘짼�왗�힋쩌챙�붋� 챙�쑣�챘혶쩌챗째�궗챘짤쨈 챙혶쨈챘짱쨍챙짠�궗챘짜쩌 챘째�씳ぢ욋�씳�짚흸.
@@ -131,6 +134,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				frame.dispose();
 				main = new TMain();
 			}
+
 		});
 		frame.add(exitButton);
 		*/
@@ -154,28 +158,49 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				});
 				frame.add(menuBar);
 			*/	
-			newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-play.png")));
+			newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-play(1).png")));
 		    newButton.setBorderPainted(false);
 		    newButton.setContentAreaFilled(false);
 		    newButton.setFocusPainted(false);
 	
 				newButton.setSize(newButton.getPreferredSize());
-				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 450 , 600);
+				newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 250 , 600);
 				newButton.setFocusable(false);
 				frame.getContentPane().add(newButton);
 			    newButton.setBackground(Color.WHITE);
 				
 				
-			    keyButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-help.png")));
+			    keyButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-help(1).png")));
 			    keyButton.setBorderPainted(false);
 			    keyButton.setContentAreaFilled(false);
 			    keyButton.setFocusPainted(false);
 				keyButton.setSize(newButton.getWidth(), keyButton.getPreferredSize().height);
-				keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 520, 600);
+				keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 370, 600);
 				keyButton.setFocusable(false);
 				frame.getContentPane().add(keyButton);
-			    keyButton.setBackground(Color.WHITE);
+			   keyButton.setBackground(Color.WHITE);
+			   
+			   homeButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-exit.png")));
+			    homeButton.setBorderPainted(false);
+			    homeButton.setContentAreaFilled(false);
+			    homeButton.setFocusPainted(false);
+				homeButton.setSize(keyButton.getWidth(), homeButton.getPreferredSize().height);
+				homeButton.setLocation(W / 2 - homeButton.getWidth() / 2 + 1020, 50);
+				homeButton.setFocusable(false);
+				frame.getContentPane().add(homeButton);
+			   homeButton.setBackground(Color.WHITE);
 				
+//			    keyButton.addMouseListener(new MouseAdapter(){
+//
+//					@Override
+//					public void mousePressed(MouseEvent e) {
+//						game.die();
+//						aiGame.die();
+//						frame.dispose();
+//						main = new TMain();
+//					}
+//				});
+			    
 				restartButton = new JButton("Restart");
 				restartButton.setSize(restartButton.getPreferredSize());
 				
@@ -261,6 +286,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 				//medButton.setSelected(true);
 				keyButton.addActionListener(this);
 				newButton.addActionListener(this);
+				homeButton.addActionListener(this);
 				/*
 				offButton.addActionListener(this);
 				slowButton.addActionListener(this);
@@ -405,6 +431,11 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 					launchNewGameDialog();
 				else if (source == keyButton)
 					launchKeyDialog();
+				else if (source==homeButton) {
+					game.die();
+					frame.dispose();
+					main = new TMain();
+				}
 //				else if (source == offButton)
 //				{
 //					sleepTime = OFF_SPEED;
