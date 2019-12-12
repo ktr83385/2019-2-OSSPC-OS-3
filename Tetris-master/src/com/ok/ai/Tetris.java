@@ -873,11 +873,6 @@ public int level=1;
 	protected static final Color C_NOTICE = new Color(255, 255, 255, 225);
 												// I, S, T, O, Z, L, J
 	protected static final Color[] COLORS = {null, Color.CYAN, Color.RED, Color.MAGENTA, Color.YELLOW, Color.GREEN, Color.ORANGE, new Color(100, 150, 255), new Color(190, 190, 190)};
-//	protected static final Font F_LINES = new Font("digital-7", Font.BOLD, 24);
-//	protected static final Font F_TIME = new Font(Font.SANS_SERIF, Font.BOLD, 14);
-//	protected static final Font F_UI = new Font("digital-7", Font.BOLD, 14);
-//	protected static final Font F_PAUSE = new Font("digital-7", Font.BOLD, 36);
-//	protected static final Font F_GAMEOVER = new Font("digital-7", Font.BOLD, 48);
 	
 	public void drawTo(Graphics2D g, int x, int y)
 	{
@@ -886,7 +881,6 @@ public int level=1;
 		y += 60;
 
 		g.setColor(C_BACKGROUND); //배경색 대입
-		//g.fillRoundRect(x, y, FIELD_W, FIELD_H, 20, 20);
 		g.fillRect(x, y, FIELD_W, FIELD_H); //게임 창 구성
 
 		if (!dead)
@@ -1050,11 +1044,9 @@ public int level=1;
 			drawTetrimino(g, fMoves[i], x + FIELD_W + DSP_W / 2, y + (int)(SQR_W*2.5) + yoffset, (int)(SQR_W/2));
 		}
 		g.setColor(Color.WHITE);
-		//g.drawRect(x + FIELD_W + 10 + 1, y + 20 + 1, 50 - 2, 50 - 2);
 
 
 		g.setColor(Color.WHITE);
-		//g.drawRect(x, y-84, 200, 70);
 
 		g.setColor (Color.WHITE);
 		g.drawRoundRect(x, y-84, SQR_W*10, DSP_W, 20, 20); //보드판 크기 리사이징

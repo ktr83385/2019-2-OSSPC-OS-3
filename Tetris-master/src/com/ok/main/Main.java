@@ -12,17 +12,6 @@ public class Main {
 	
 	public static int SCREEN_WIDTH = 0;
 	public static int SCREEN_HEIGHT = 0;
-	public static boolean mute=true;
-	
-	
-	public static boolean getMute() {
-		return mute;
-	}
-
-
-	public static void setMute(boolean mute) {
-		Main.mute = mute;
-	}
 
 
 	public static void main(String[] args) {
@@ -34,7 +23,7 @@ public class Main {
 		new TMain();
 		
 		BGM sound_bgm = new BGM();
-		while(getMute()) {
+		while(true) {
 			try {
 				sound_bgm.abc();
 				Thread.sleep(192000); // replay
