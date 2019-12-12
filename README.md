@@ -17,6 +17,11 @@ and experience collaborative process through GitHUb
 * **Language** - *Java (jdk 1.8.0_222)*
 * **OS** - *Linux Ubuntu 16.04 (64 bit)*
 
+## Game Start
+
+* **Step 1.** - *Clone or Download this Repository*
+* **Step 2.** - *Run Main.java (at Tetris-master\src\com\ok\main)*
+
 
 ## License
 
