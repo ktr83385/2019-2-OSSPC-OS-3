@@ -71,6 +71,9 @@ This project is licensed under the MIT License
 * **To make the Tetris more fun, added BGM**
 * **BGM** - *The Fat Rat - Prelude*
 
+　
+### OS Tetris Project is belongs to 2019-2 Open Source Software Project, Dongguk Univ, Seoul
+
 
 
 
