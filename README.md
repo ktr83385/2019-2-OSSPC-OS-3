@@ -30,36 +30,42 @@ This project is licensed under the MIT License
 ![md_main_debug](https://user-images.githubusercontent.com/51446907/70676686-4c791380-1cd0-11ea-99f4-75a7132a33b7.png)
 ![md_main](https://user-images.githubusercontent.com/51446907/70676675-44b96f00-1cd0-11ea-8a89-072419627cfd.png)
 
-Fix an error where the home screen is not output.
-And add background Image.
+* **Fix an error where the home screen is not output. And add background Image.**
+
+　
 
 ### 2. Remove AI
 
 ![md_ai](https://user-images.githubusercontent.com/51446907/70677251-fdcc7900-1cd1-11ea-87f7-1fc0014a60e9.png)
 
-Since the credits cannot be paid to the original creator,
-the AI ​​function has been drastically removed.
+* **Since the credits cannot be paid to the original creator, the AI ​​function has been drastically removed.**
+
+　
 
 ### 3. Frame Resizing
 
 ![md_resizing](https://user-images.githubusercontent.com/51446907/70676709-6155a700-1cd0-11ea-8308-8d5e958a05f4.png)
 ![md_screen_os](https://user-images.githubusercontent.com/51446907/70676719-674b8800-1cd0-11ea-8ca4-b3cd3eb20bd9.png)
 
-From JButton, Resize elements based on window size.
+* **From JButton, Resize elements based on window size.**
+
+　
 
 ### 4. RANKING Button
 
 ![md_rankbtn](https://user-images.githubusercontent.com/51446907/70676693-5569e500-1cd0-11ea-972b-4bb4560e9065.png)
 ![md_ranktable](https://user-images.githubusercontent.com/51446907/70677484-9fec6100-1cd2-11ea-8172-3b2ccde2d453.png)
 
-Added button to check Rank at Main
+* **Added button to check Ranking at Main**
+　
 
 ### 5. BGM
 
 ![md_thefatrat](https://user-images.githubusercontent.com/51446907/70676733-7a5e5800-1cd0-11ea-8879-a53e81fa22b7.png)
 
-To make the Tetris more fun, added BGM
-* **PSNB92** - *The Fat Rat - Prelude*
+* **To make the Tetris more fun, added BGM**
+* **BGM** - *The Fat Rat - Prelude*
+
 
 
 
