@@ -1,4 +1,4 @@
-# TETRIS. Open Source Software Project
+# OS TETRIS. Open Source Software Project
 
 Open Source ISE - KimSeonHu-DGU / Minji-0901 / hyeonazzz
 
