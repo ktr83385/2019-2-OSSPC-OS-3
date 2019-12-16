@@ -72,11 +72,10 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 		frame.setResizable(true); //Resize the Game screen using the mouse
 
 	
-		newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-play(1).png")));
+		newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-play.png")));
 		newButton.setBorderPainted(false);
 		newButton.setContentAreaFilled(false);
 		newButton.setFocusPainted(false);
-	
 		newButton.setSize(newButton.getPreferredSize());
 		newButton.setLocation(W / 2 - newButton.getWidth() / 2 + 250 , 600);
 		newButton.setFocusable(false);
@@ -84,22 +83,21 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 		newButton.setBackground(Color.WHITE);
 				
 				
-		keyButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-help(1).png")));
+		keyButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-help.png")));
 		keyButton.setBorderPainted(false);
 		keyButton.setContentAreaFilled(false);
 		keyButton.setFocusPainted(false);
-		keyButton.setSize(newButton.getWidth(), keyButton.getPreferredSize().height);
+		keyButton.setSize(keyButton.getPreferredSize());
 		keyButton.setLocation(W / 2 - keyButton.getWidth() / 2 + 400, 600);
 		keyButton.setFocusable(false);
 		frame.getContentPane().add(keyButton);
 		keyButton.setBackground(Color.WHITE);
 			   
-		homeButton =new JButton ();
-		//new ImageIcon(Main.class.getResource("../images/button-exit.png")));
+		homeButton =new JButton (new ImageIcon(Main.class.getResource("../images/home-exit.png")));
 		homeButton.setBorderPainted(false);
 		homeButton.setContentAreaFilled(false);
 		homeButton.setFocusPainted(false);
-		homeButton.setSize(keyButton.getWidth(), homeButton.getPreferredSize().height);
+		homeButton.setSize(homeButton.getPreferredSize());
 		homeButton.setLocation(W / 2 - homeButton.getWidth() / 2 + 1020, 50);
 		homeButton.setFocusable(false);
 		frame.getContentPane().add(homeButton);
@@ -187,8 +185,13 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 			game.setSQR_W(frame.getSize().width/50);
 			game.setDSP_W(frame.getSize().width/15);
 			game.drawTo((Graphics2D)(g), (int)(frame.getSize().width/3), (int)(frame.getSize().height/5)); //The play Screen can move according to the size of the frame
-	 	    newButton.resize((int)(frame.getSize().width/3.8),frame.getSize().height/7);
-			keyButton.resize((int)(frame.getSize().width/3.8),frame.getSize().height/7);
+			newButton.setSize(frame.getSize().width/8,frame.getSize().width/16);
+			keyButton.setSize(frame.getSize().width/18,frame.getSize().width/19);
+			homeButton.setSize(frame.getSize().width/8,frame.getSize().width/19);
+			newButton.setLocation(W/2-newButton.getWidth()/2+Tetris.SQR_W*14,Tetris.SQR_W*30);
+			keyButton.setLocation(W/2-keyButton.getWidth()/2+Tetris.SQR_W*19,Tetris.SQR_W*30);
+			homeButton.setLocation(W/2-homeButton.getWidth()/2+Tetris.SQR_W*51,(int)(Tetris.SQR_W*2.5));
+		
 
 			}
 
