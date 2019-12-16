@@ -72,7 +72,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 		frame.setResizable(true); //Resize the Game screen using the mouse
 
 	
-		newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-play.png")));
+		newButton =new JButton (new ImageIcon(Main.class.getResource("../images/button-newgame.png")));
 		newButton.setBorderPainted(false);
 		newButton.setContentAreaFilled(false);
 		newButton.setFocusPainted(false);
@@ -172,6 +172,7 @@ public class TetrisRenderer extends Component implements KeyListener, ActionList
 		background.setFocusPainted(false);
 		background.setVisible(true);
 		frame.add(background); //add game play screen background image
+		frame.setLocationRelativeTo(null);
 		}
 			
 		public Dimension getPreferredSize()
