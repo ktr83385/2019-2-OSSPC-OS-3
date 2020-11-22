@@ -30,46 +30,7 @@ This project is licensed under the MIT License
 
 ## Project Contents
 
-### 1. Improvement of error
 
-![image](https://user-images.githubusercontent.com/55723966/99901388-baf48d00-2cf9-11eb-9639-bc4314a7e72f.png)
-
-![캡처](https://user-images.githubusercontent.com/55723966/99901420-e7a8a480-2cf9-11eb-9dd4-9dd4e0eb8f30.PNG)
-
-
-
-* **Fixed an error where the mouse does not work after starting the game and entering again.
-The picture above is that was operated normally by clicking the home button with the mouse.**
-
-　
-
-### 2. Add countdown before game start
-
-![캡처](https://user-images.githubusercontent.com/55723966/99901638-4f132400-2cfb-11eb-9599-cfeffc2b8df8.PNG)
-
-![캡처1](https://user-images.githubusercontent.com/55723966/99901659-8550a380-2cfb-11eb-8bc3-c048702a5b19.PNG)
-
-* **Instead of starting the game right away, to give it time to prepare and play the game.**
-
-　
-
-### 3. Ranking System with DataBase
-
-![image](https://user-images.githubusercontent.com/55723966/99901736-4bcc6800-2cfc-11eb-9239-d9809e552e16.png)
-
-![image](https://user-images.githubusercontent.com/55723966/99901747-5f77ce80-2cfc-11eb-8716-237fe32fba8e.png)
-
-* **Scoreboards that were only updated locally were synchronized anywhere by using the DataBase.**
-
-　
-
-### 4. Add mute button
-
-![image](https://user-images.githubusercontent.com/55723966/99901834-f2b10400-2cfc-11eb-96f4-4c8f8dd67423.png)
-
-* **When the button is pressed, the music is muted or played again**
-
-　
 
 ## References
 
