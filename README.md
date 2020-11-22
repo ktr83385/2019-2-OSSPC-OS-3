@@ -30,46 +30,44 @@ This project is licensed under the MIT License
 
 ## Project Contents
 
-### 1. Main Screen
+### 1. Improvement of error
 
-![md_main_debug](https://user-images.githubusercontent.com/51446907/70676686-4c791380-1cd0-11ea-99f4-75a7132a33b7.png)
-![md_main](https://user-images.githubusercontent.com/51446907/70676675-44b96f00-1cd0-11ea-8a89-072419627cfd.png)
+![image](https://user-images.githubusercontent.com/55723966/99901388-baf48d00-2cf9-11eb-9639-bc4314a7e72f.png)
 
-* **Fix an error where the home screen is not output. And add background Image.**
+![캡처](https://user-images.githubusercontent.com/55723966/99901420-e7a8a480-2cf9-11eb-9dd4-9dd4e0eb8f30.PNG)
 
-　
 
-### 2. Remove AI
 
-![md_ai](https://user-images.githubusercontent.com/51446907/70677251-fdcc7900-1cd1-11ea-87f7-1fc0014a60e9.png)
-
-* **Since the credits cannot be paid to the original creator, the AI ​​function has been drastically removed.**
+* **Fixed an error where the mouse does not work after starting the game and entering again.
+The picture above is that was operated normally by clicking the home button with the mouse.**
 
 　
 
-### 3. Frame Resizing
+### 2. Add countdown before game start
 
-![md_resizing](https://user-images.githubusercontent.com/51446907/70676709-6155a700-1cd0-11ea-8308-8d5e958a05f4.png)
-![md_screen_os](https://user-images.githubusercontent.com/51446907/70676719-674b8800-1cd0-11ea-8ca4-b3cd3eb20bd9.png)
+![캡처](https://user-images.githubusercontent.com/55723966/99901638-4f132400-2cfb-11eb-9599-cfeffc2b8df8.PNG)
 
-* **From JButton, Resize elements based on window size.**
+![캡처1](https://user-images.githubusercontent.com/55723966/99901659-8550a380-2cfb-11eb-8bc3-c048702a5b19.PNG)
+
+* **Instead of starting the game right away, to give it time to prepare and play the game.**
 
 　
 
-### 4. RANKING Button
+### 3. Ranking System with DataBase
 
-![md_rankbtn](https://user-images.githubusercontent.com/51446907/70676693-5569e500-1cd0-11ea-972b-4bb4560e9065.png)
-![md_ranktable](https://user-images.githubusercontent.com/51446907/70677484-9fec6100-1cd2-11ea-8172-3b2ccde2d453.png)
+![image](https://user-images.githubusercontent.com/55723966/99901736-4bcc6800-2cfc-11eb-9239-d9809e552e16.png)
 
-* **Added button to check Ranking at Main**
+![image](https://user-images.githubusercontent.com/55723966/99901747-5f77ce80-2cfc-11eb-8716-237fe32fba8e.png)
+
+* **Scoreboards that were only updated locally were synchronized anywhere by using the DataBase.**
+
 　
 
-### 5. BGM
+### 4. Add mute button
 
-![md_thefatrat](https://user-images.githubusercontent.com/51446907/70676733-7a5e5800-1cd0-11ea-8879-a53e81fa22b7.png)
+![image](https://user-images.githubusercontent.com/55723966/99901834-f2b10400-2cfc-11eb-96f4-4c8f8dd67423.png)
 
-* **To make the Tetris more fun, added BGM**
-* **BGM** - *The Fat Rat - Prelude*
+* **When the button is pressed, the music is muted or played again**
 
 　
 
